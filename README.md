@@ -5,6 +5,7 @@ To send a message simultaneously to all users that ever entered the service.
 ## Usage
 
 To call the plugin use the link of this kind: ```http://plugins.miniapps.run/sender-plugin?....``` 
+
 For example:
 ```<page version="2.0">
   <navigation>
