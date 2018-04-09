@@ -4,8 +4,10 @@
 
 The dialog with a user is transferred to the trained AI bot https://qnamaker.ai that uses FAQ for training and answers users in a native language. 
 
-```(!)Use case: self assistance page
-The user is prompted into a chat with the bot to solve a problem```
+```
+(!)Use case: self assistance page
+The user is prompted into a chat with the bot to solve a problem
+```
 
 ## Usage
 
