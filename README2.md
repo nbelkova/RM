@@ -1,35 +1,29 @@
-# Connection to MS QNA
+# VK Market
 
 ## Goal
 
-The dialog with a user is transferred to the trained AI bot https://qnamaker.ai that uses FAQ for training and answers users in a native language. 
-
-```
-(!) Use case: self assistance page
-The user is prompted into a chat with the bot to solve a problem
-```
+Making of purchases at VK Market, including user's connection to the market, picking up goods, purchase completion.
 
 ## Usage
 
-To call the plugin use the link of this kind: ```http://plugins.miniapps.run/ai_msqna?....``` 
+The plugin is called using a link of the type: ```http://plugins.miniapps.run/vk-market?....``` 
 
-For instance:
-```<page version="2.0">
-  <div>
-    Thank you for using the service!
-  </div>
- 
+For example:
+```
+<page version="2.0">
   <navigation>
-    <link pageId="http://plugins.miniapps.run/ai_msqna?query=Hello&amp;back_url=index.xml&amp;token=23143434r54:er4hhigdsfsdafdadf">
-      Back to home page
+    <link pageId="http://plugins.miniapps.run/vk-market?vk_access_token=<some_access_token>&vk_user_id=<some_user_id>&merchant_email=bob@example.com&locale=ru&exit_url=<some_exit_url>">
+       Go to VK Market
     </link>
   </navigation>
 </page>
 ```
 
 ## Parameters
-|Parameter    |Mandatory    |Description          |
-|-------------|-------------|---------------------|
-|query        |Yes          |The text of the request to be passed to the bot https://qnamaker.ai when the user follows the link. For instance, "Hello!" causes the bot to welcome the user. As another option, it can be a question the bot is trained to answer.|
-|back_url     |Yes          |The address of the page to land the user back to the dialog. The Return button is always accessible by the user while chatting with the bot.|
-|token        |No           |Developer's token https://qnamaker.ai of the bot. It is not required, if the parameter ms-qna.token is indicated in the service configuration.|
+|Parameters		|Mandatory	|Description								|
+|:----------------------|:-------------:|:----------------------------------------------------------------------|
+|vk_access_token	|Yes		|Access token to VK Market API.						|
+|vk_user_id		|Yes		|User ID in VK (for the seller).					|
+|merchant_email		|Yes		|Seller's email address (for notifications).				|
+|exit_url		|Yes		|The URL to go to after exiting the plugin.				|
+|locale			|No		|Text language. Supported languages: RU, EN - default.			|
