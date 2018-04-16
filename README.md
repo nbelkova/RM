@@ -34,8 +34,9 @@ HTTP links are also supported (see Calling plugins).
 ## Parameters
 
 When using the link the following parameters are provided (in both the HTTP and verify:// formats).
+
 |Parameters	|Mandatory	|Description											|
-|---------------|---------------|-----------------------------------------------------------------------------------------------|
+|:--------------|:-------------:|:----------------------------------------------------------------------------------------------|
 |success_url	|Yes		|The address the user should come to after the MSISDN is verified (or in the case it is already	 verified)|
 |type		|No		|Verification method. This parameter is used when the preferred verification method is not 					specified in the user's profile. Possible values:
 - c2s -	the default method. After entering the MSISDN the user should make a voice call to a C2S number from that mobile device,
@@ -65,4 +66,3 @@ Verification can be bypassed by means of the following parameters (depending on 
 ```
 <property name="telegram.msisdn.confirmation.enabled" value="false"/>
 <property name="skype.msisdn.confirmation.enabled" value="false"/>
-```
